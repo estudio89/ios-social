@@ -9,5 +9,8 @@
 import Foundation
 
 class LinkedinAuth: AbstractSocialAuth {
+    override func setupLogin(loginBtn: UIButton) {
+        
+    }
     
 }
