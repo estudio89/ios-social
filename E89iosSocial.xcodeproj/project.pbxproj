@@ -21,6 +21,12 @@
 		7B858DC01C9B5D8B003F3051 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B858DBF1C9B5D8B003F3051 /* linkedin-sdk.framework */; };
 		7B858DCD1C9DBD5D003F3051 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B858DCB1C9DBD5D003F3051 /* FBSDKCoreKit.framework */; };
 		7B858DCE1C9DBD5D003F3051 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B858DCC1C9DBD5D003F3051 /* FBSDKLoginKit.framework */; };
+		7B858DD81C9EE361003F3051 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B858DD61C9EE361003F3051 /* GoogleSignIn.bundle */; };
+		7B858DD91C9EE361003F3051 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B858DD71C9EE361003F3051 /* GoogleSignIn.framework */; };
+		7B858DDB1C9EE3AC003F3051 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B858DDA1C9EE3AC003F3051 /* AddressBook.framework */; };
+		7B858DDD1C9EE3B5003F3051 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B858DDC1C9EE3B5003F3051 /* SafariServices.framework */; };
+		7B858DDF1C9EE3BE003F3051 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B858DDE1C9EE3BE003F3051 /* StoreKit.framework */; };
+		7B858DE11C9EE3C6003F3051 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B858DE01C9EE3C6003F3051 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		7B858DBF1C9B5D8B003F3051 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
 		7B858DCB1C9DBD5D003F3051 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		7B858DCC1C9DBD5D003F3051 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		7B858DD61C9EE361003F3051 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		7B858DD71C9EE361003F3051 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		7B858DDA1C9EE3AC003F3051 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		7B858DDC1C9EE3B5003F3051 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		7B858DDE1C9EE3BE003F3051 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		7B858DE01C9EE3C6003F3051 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +70,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B858DE11C9EE3C6003F3051 /* SystemConfiguration.framework in Frameworks */,
+				7B858DDF1C9EE3BE003F3051 /* StoreKit.framework in Frameworks */,
+				7B858DDD1C9EE3B5003F3051 /* SafariServices.framework in Frameworks */,
+				7B858DDB1C9EE3AC003F3051 /* AddressBook.framework in Frameworks */,
 				7B858DC01C9B5D8B003F3051 /* linkedin-sdk.framework in Frameworks */,
 				7B858DCD1C9DBD5D003F3051 /* FBSDKCoreKit.framework in Frameworks */,
 				7B858DCE1C9DBD5D003F3051 /* FBSDKLoginKit.framework in Frameworks */,
+				7B858DD91C9EE361003F3051 /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +140,12 @@
 		DD0D2D55AAB63E6F94B0E697 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B858DE01C9EE3C6003F3051 /* SystemConfiguration.framework */,
+				7B858DDE1C9EE3BE003F3051 /* StoreKit.framework */,
+				7B858DDC1C9EE3B5003F3051 /* SafariServices.framework */,
+				7B858DDA1C9EE3AC003F3051 /* AddressBook.framework */,
+				7B858DD61C9EE361003F3051 /* GoogleSignIn.bundle */,
+				7B858DD71C9EE361003F3051 /* GoogleSignIn.framework */,
 				7B858DCB1C9DBD5D003F3051 /* FBSDKCoreKit.framework */,
 				7B858DCC1C9DBD5D003F3051 /* FBSDKLoginKit.framework */,
 				7B858DBF1C9B5D8B003F3051 /* linkedin-sdk.framework */,
@@ -221,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B858DD81C9EE361003F3051 /* GoogleSignIn.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +316,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -341,6 +366,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -372,10 +398,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = E89iosSocial/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Estudio89.E89iosSocial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -397,10 +426,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = E89iosSocial/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Estudio89.E89iosSocial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -9,5 +9,8 @@
 import Foundation
 
 class GoogleAuth: AbstractSocialAuth {
+    override func setupLogin(loginBtn: UIButton) {
+
+    }
     
 }

@@ -9,5 +9,7 @@
 import Foundation
 
 class TwitterAuth: AbstractSocialAuth {
-    
+    override func setupLogin(loginBtn: UIButton) {
+
+    }
 }

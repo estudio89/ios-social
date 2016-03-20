@@ -13,7 +13,7 @@
 
   s.homepage     = "http://www.estudio89.com.br"
 
-  s.source       = { :git => "https://github.com/estudio89/ios-social.git", :branch => "master"}
+  s.source       = { :git => "https://github.com/estudio89/ios-social.git", :tag => "0.0.0"}
 
   #s.dependency 'FBSDKCoreKit'
   #s.dependency 'FBSDKLoginKit'
