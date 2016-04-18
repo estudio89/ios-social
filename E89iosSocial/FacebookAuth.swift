@@ -7,24 +7,18 @@
 //
 
 import Foundation
-import FBSDKCoreKit
-import FBSDKLoginKit
 
-class FacebookAuth: AbstractSocialAuth, FBSDKLoginButtonDelegate {
+class FacebookAuth: AbstractSocialAuth, FacebookButtonDelegate {
     private var email: String = ""
     private var name: String = ""
     private var fbToken: String = ""
     private var userId: String = ""
-    private var fbLoginButton: FBSDKLoginButton?
+    private var fbLoginButton: FacebookButton?
     
     private var dataRequestFinished: Bool = false
     
-    override func initializeSDK() {
-        
-    }
-    
-    override func setupLogin(loginBtn: UIButton) {
-        fbLoginButton = loginBtn as? FBSDKLoginButton
+    override func setupLogin(loginBtn: UIView) {
+        fbLoginButton = loginBtn as? FacebookButton
         fbLoginButton!.delegate = self
         fbLoginButton!.readPermissions = ["public_profile", "email"]
         
@@ -35,11 +29,12 @@ class FacebookAuth: AbstractSocialAuth, FBSDKLoginButtonDelegate {
             object: nil)
     }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+    override func initializeSDK() {
+    }
+    
+    func loginButton(loginButton: FacebookButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if (error != nil) {
-            if (listener != nil) {
-                listener?.onSocialAuthFailed(loginButton, socialAuthIdentifier: getSocialAuthIdentifier(), message: error.localizedDescription)
-            }
+            self.onFailed(error)
         } else {
             if (result.isCancelled) {
                 if (listener != nil) {
@@ -53,9 +48,6 @@ class FacebookAuth: AbstractSocialAuth, FBSDKLoginButtonDelegate {
         }
     }
     
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-    }
-    
     func onCurrentAccessTokenChanged(notification: NSNotification) {
         if (FBSDKAccessToken.currentAccessToken() == nil) {
             logout()
@@ -67,11 +59,12 @@ class FacebookAuth: AbstractSocialAuth, FBSDKLoginButtonDelegate {
         let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"name,email"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             if ((error) != nil) {
-                print("----> Error: \(error)")
+                self.onFailed(error)
             } else {
-                self.name = result.stringForKey("name")!
-                self.email = result.stringForKey("email")!
+                self.name = result["name"] as! String
+                self.email = result["email"] as! String
                 self.dataRequestFinished = true
+                self.notifyListenerAuthSuccess()
             }
         })
     }
@@ -81,6 +74,12 @@ class FacebookAuth: AbstractSocialAuth, FBSDKLoginButtonDelegate {
             setLoginStatus(true)
             storeAuthData(name, email: email, token: fbToken, userId: userId)
             listener?.onSocialAuthSuccess(fbLoginButton!, socialAuthIdentifier: getSocialAuthIdentifier(), socialAuthToken: fbToken, email: email, name: name, userId: userId)
+        }
+    }
+    
+    func onFailed(error: NSError) {
+        if (listener != nil) {
+            listener?.onSocialAuthFailed((fbLoginButton as! UIButton), socialAuthIdentifier: getSocialAuthIdentifier(), message: error.localizedDescription)
         }
     }
     
@@ -95,6 +94,7 @@ class FacebookAuth: AbstractSocialAuth, FBSDKLoginButtonDelegate {
         email = ""
         name = ""
         fbToken = ""
+        userId = ""
         dataRequestFinished = false
         
         super.logout()

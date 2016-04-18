@@ -8,20 +8,10 @@
 
 import Foundation
 
-class SocialAuthListener {
-    func onSocialLoginButtonClicked(button: UIButton) {
-    }
-    
-    func onSocialAuthCanceled(button: UIButton, socialAuthIdentifier: String) {
-    }
-    
-    func onSocialAuthFailed(button: UIButton, socialAuthIdentifier: String, message: String) {
-    }
-    
-    func onSocialAuthSuccess(button: UIButton, socialAuthIdentifier: String, socialAuthToken: String, email: String, name: String, userId: String) {
-    }
-    
-    func onSocialLogout(socialAuthIdentifier: String) {
-    }
-    
+@objc protocol SocialAuthListener {
+    func onSocialLoginButtonClicked(button: UIView)
+    func onSocialAuthCanceled(button: UIView, socialAuthIdentifier: String)
+    func onSocialAuthFailed(button: UIView, socialAuthIdentifier: String, message: String)
+    func onSocialAuthSuccess(button: UIView, socialAuthIdentifier: String, socialAuthToken: String, email: String, name: String, userId: String)
+    optional func onSocialLogout(socialAuthIdentifier: String)
 }

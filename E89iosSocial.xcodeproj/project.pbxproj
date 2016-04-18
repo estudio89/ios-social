@@ -10,6 +10,11 @@
 		7B42D3761C74DCF0007A8817 /* E89iosSocial.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B42D3751C74DCF0007A8817 /* E89iosSocial.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B42D37D1C74DCF0007A8817 /* E89iosSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B42D3721C74DCF0007A8817 /* E89iosSocial.framework */; };
 		7B42D3821C74DCF0007A8817 /* E89iosSocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B42D3811C74DCF0007A8817 /* E89iosSocialTests.swift */; };
+		7B6BE8161CC56A810071C5DA /* FacebookButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6BE8111CC56A810071C5DA /* FacebookButton.swift */; };
+		7B6BE8171CC56A810071C5DA /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6BE8121CC56A810071C5DA /* GoogleButton.swift */; };
+		7B6BE8181CC56A810071C5DA /* LinkedinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6BE8131CC56A810071C5DA /* LinkedinButton.swift */; };
+		7B6BE8191CC56A810071C5DA /* SocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6BE8141CC56A810071C5DA /* SocialButton.swift */; };
+		7B6BE81A1CC56A810071C5DA /* TwitterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6BE8151CC56A810071C5DA /* TwitterButton.swift */; };
 		7B858DAE1C9AE271003F3051 /* SocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B858DAD1C9AE271003F3051 /* SocialAuth.swift */; };
 		7B858DB01C9AE2B8003F3051 /* SocialAuthListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B858DAF1C9AE2B8003F3051 /* SocialAuthListener.swift */; };
 		7B858DB21C9AE37D003F3051 /* AbstractSocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B858DB11C9AE37D003F3051 /* AbstractSocialAuth.swift */; };
@@ -46,6 +51,11 @@
 		7B42D37C1C74DCF0007A8817 /* E89iosSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = E89iosSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B42D3811C74DCF0007A8817 /* E89iosSocialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E89iosSocialTests.swift; sourceTree = "<group>"; };
 		7B42D3831C74DCF0007A8817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B6BE8111CC56A810071C5DA /* FacebookButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookButton.swift; sourceTree = "<group>"; };
+		7B6BE8121CC56A810071C5DA /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
+		7B6BE8131CC56A810071C5DA /* LinkedinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedinButton.swift; sourceTree = "<group>"; };
+		7B6BE8141CC56A810071C5DA /* SocialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialButton.swift; sourceTree = "<group>"; };
+		7B6BE8151CC56A810071C5DA /* TwitterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterButton.swift; sourceTree = "<group>"; };
 		7B858DAD1C9AE271003F3051 /* SocialAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialAuth.swift; sourceTree = "<group>"; };
 		7B858DAF1C9AE2B8003F3051 /* SocialAuthListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialAuthListener.swift; sourceTree = "<group>"; };
 		7B858DB11C9AE37D003F3051 /* AbstractSocialAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractSocialAuth.swift; sourceTree = "<group>"; };
@@ -114,6 +124,7 @@
 		7B42D3741C74DCF0007A8817 /* E89iosSocial */ = {
 			isa = PBXGroup;
 			children = (
+				7B6BE8101CC56A810071C5DA /* buttons */,
 				7B42D3751C74DCF0007A8817 /* E89iosSocial.h */,
 				7B42D3771C74DCF0007A8817 /* Info.plist */,
 				7B858DB11C9AE37D003F3051 /* AbstractSocialAuth.swift */,
@@ -135,6 +146,18 @@
 				7B42D3831C74DCF0007A8817 /* Info.plist */,
 			);
 			path = E89iosSocialTests;
+			sourceTree = "<group>";
+		};
+		7B6BE8101CC56A810071C5DA /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7B6BE8111CC56A810071C5DA /* FacebookButton.swift */,
+				7B6BE8121CC56A810071C5DA /* GoogleButton.swift */,
+				7B6BE8131CC56A810071C5DA /* LinkedinButton.swift */,
+				7B6BE8141CC56A810071C5DA /* SocialButton.swift */,
+				7B6BE8151CC56A810071C5DA /* TwitterButton.swift */,
+			);
+			path = buttons;
 			sourceTree = "<group>";
 		};
 		DD0D2D55AAB63E6F94B0E697 /* Frameworks */ = {
@@ -265,8 +288,13 @@
 				7B858DBA1C9AE4EF003F3051 /* LinkedinAuth.swift in Sources */,
 				7B858DBC1C9AE507003F3051 /* TwitterAuth.swift in Sources */,
 				7B858DB01C9AE2B8003F3051 /* SocialAuthListener.swift in Sources */,
+				7B6BE81A1CC56A810071C5DA /* TwitterButton.swift in Sources */,
+				7B6BE8181CC56A810071C5DA /* LinkedinButton.swift in Sources */,
+				7B6BE8161CC56A810071C5DA /* FacebookButton.swift in Sources */,
+				7B6BE8171CC56A810071C5DA /* GoogleButton.swift in Sources */,
 				7B858DB61C9AE4AB003F3051 /* FacebookAuth.swift in Sources */,
 				7B858DB81C9AE4CF003F3051 /* GoogleAuth.swift in Sources */,
+				7B6BE8191CC56A810071C5DA /* SocialButton.swift in Sources */,
 				7B858DB21C9AE37D003F3051 /* AbstractSocialAuth.swift in Sources */,
 				7B858DB41C9AE453003F3051 /* SocialAuthManager.swift in Sources */,
 				7B858DAE1C9AE271003F3051 /* SocialAuth.swift in Sources */,

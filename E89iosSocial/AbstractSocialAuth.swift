@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AbstractSocialAuth: SocialAuth {
+class AbstractSocialAuth: NSObject, SocialAuth {
     static var LOGGED_IN_KEY = "logged_in"
     static var NAME_KEY = "name"
     static var EMAIL_KEY = "email"
@@ -19,6 +19,16 @@ class AbstractSocialAuth: SocialAuth {
     
     init(listener: SocialAuthListener) {
         self.listener = listener
+    }
+    
+    func setupLogin(loginBtn: UIView) {
+    }
+    
+    func getSocialAuthIdentifier() -> String {
+        return ""
+    }
+    
+    func initializeSDK() {
     }
     
     /**
@@ -66,7 +76,7 @@ class AbstractSocialAuth: SocialAuth {
             authData.append(token!)
             authData.append(userId!)
         }
-
+        
         return authData
     }
     
@@ -77,15 +87,13 @@ class AbstractSocialAuth: SocialAuth {
         defaults.removeObjectForKey(getSocialAuthIdentifier() + "." + AbstractSocialAuth.TOKEN_KEY)
     }
     
-    override func logout() {
+    func logout() {
         setLoginStatus(false)
         clearAuthData()
-        if (self.listener != nil) {
-            self.listener!.onSocialLogout(getSocialAuthIdentifier())
-        }
+        self.listener?.onSocialLogout?(getSocialAuthIdentifier())
     }
     
-    override func isLoggedIn() -> Bool {
+    func isLoggedIn() -> Bool {
         let defaults = NSUserDefaults.standardUserDefaults()
         return defaults.boolForKey(getSocialAuthIdentifier() + "." + AbstractSocialAuth.LOGGED_IN_KEY)
     }

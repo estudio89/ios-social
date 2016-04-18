@@ -8,27 +8,10 @@
 
 import Foundation
 
-class SocialAuth: NSObject {
-    func initializeSDK() {
-    }
-    
-    func setupLogin(loginBtn: UIButton) {
-    }
-    
-    func getSocialAuthIdentifier() -> String {
-        return ""
-    }
-    
-    func onActivityResult(requestCode: Int, resultCode: Int) {
-    }
-    
-    func onDestroy() {
-    }
-    
-    func isLoggedIn() -> Bool {
-        return false
-    }
-    
-    func logout() {
-    }
+protocol SocialAuth {
+    func setupLogin(loginBtn: UIView)
+    func initializeSDK()
+    func getSocialAuthIdentifier() -> String
+    func isLoggedIn() -> Bool
+    func logout()
 }
